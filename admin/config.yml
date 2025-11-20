@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  - name: "coffee"
+    label: "Coffee Experience"
+    files:
+      - name: "data"
+        label: "Data File"
+        file: "data.json"
+        fields:
+          - name: "coffee_list"
+            label: "Coffee List"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Image", name: "image", widget: "image"}
